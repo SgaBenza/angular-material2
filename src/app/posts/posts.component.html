@@ -1,0 +1,37 @@
+<form>
+  <md-form-field>
+    <input mdInput placeholder="Inserisci post" type="text"
+    (change)="createPost(title)" #title>
+  </md-form-field>
+   
+</form>
+<md-list>
+  <md-list-item *ngFor="let post of posts">
+  <!-- <button md-button (click)="updatePost(post)">update</button> -->
+  <!-- <button md-mini-fab color="primary" (click)="deletePost(post)">delete</button> -->
+  <button md-mini-fab color="primary">
+      <md-icon class="md-24" (click)="updatePost(post)">update</md-icon>
+  </button>
+  <button md-mini-fab>
+      <md-icon class="md-24" (click)="deletePost(post)">delete</md-icon>
+  </button>
+  
+  {{post.title}}
+  </md-list-item>
+</md-list>
+
+
+
+<!-- <div class="container">
+  <div class="navbar"></div>
+  <input 
+    (keyup.enter)="createPost(title)" #title
+    type="text" class="form-control">
+  <ul class="list-group">
+    <li 
+      *ngFor="let post of posts"
+      class="list-group-item">
+      {{post.title}}
+    </li>
+  </ul>
+</div> -->
