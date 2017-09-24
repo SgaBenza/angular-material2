@@ -1,0 +1,26 @@
+<html>
+
+<head></head>
+
+<body>
+  <p id="hostElement">CSS</p>
+  <script>
+    // create shadow DOM on the <p> element above
+    var shadow = document.querySelector('#hostElement')
+      .attachShadow({ mode: 'open' });
+    shadow.innerHTML = '<h3>Here is some new text</h3>';
+    shadow.innerHTML += '<style>span { color: red; }</style>';
+  </script>
+
+ 
+
+
+</body>
+
+</html>
+
+ <form class="example-form" >
+    <md-form-field class="example-full-width ">
+      <input mdInput placeholder="Favorite food" value="Sushi">
+    </md-form-field>
+  </form>
