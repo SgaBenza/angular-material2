@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostsService } from './services/posts.service';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app.routing';
@@ -5,11 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MdInputModule, MatListModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MatListModule, MatButtonModule, MatIconModule, MatInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ShadowComponent } from './shadow/shadow.component';
 import { PostsComponent } from './posts/posts.component';
+import { ValidazioniComponent } from './validation/validazioni.component';
 
 
 
@@ -18,17 +20,20 @@ import { PostsComponent } from './posts/posts.component';
     AppComponent,
     PostsComponent,
     ShadowComponent,
+    ValidazioniComponent
 
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     HttpModule,
     MatIconModule,
-    MdInputModule,
+    MatInputModule,
     MatButtonModule,
     MatListModule,
+    ReactiveFormsModule,
     RouterModule,
   ],
   providers: [PostsService],

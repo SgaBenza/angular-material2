@@ -1,0 +1,38 @@
+<!-- <div>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="validazione facile" #easy="ngModel" ngModel name="easy" id="easy" type="text" required>
+                <mat-error *ngIf="easy.touched && easy.invalid"><strong>REQUIRED</strong></mat-error>
+            </mat-form-field> 
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Email" [formControl]="emailFormControl" name="email" id="email" type="email" required>
+                <mat-error *ngIf="emailFormControl.hasError('required')"><strong>REQUIRED</strong></mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('pattern')"><strong>Mail non valida</strong></mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input resizeToFitContent matInput placeholder="Prova Custom Errorjlkfjskfjlfkjsdlkfjslkfjsdlaf" [formControl]="customErrorFormControl"
+                    formControlName="customErrorControl" name="custom" id="custom" type="text" required>
+                <mat-error *ngIf="customErrorFormControl.hasError('required')"><strong>Errore custom</strong></mat-error>
+                <mat-error *ngIf="customErrorFormControl.error.shouldBeUnique"><strong>Errore custom | verifica user</strong></mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button>SUBMIT</button>
+        </div>
+    </form>
+</div> -->
+
+<div>
+    <form [formGroup]="errore">
+        <mat-form-field>
+            <input matInput placeholder="Prova Custom Error" formControlName="testCtrl" name="custom" id="custom" type="text" required>
+            <mat-error *ngIf="errore.get('testCtrl').hasError('shouldBeUnique')"><strong>Errore custom | verifica user</strong></mat-error>
+        </mat-form-field>
+    </form>
+</div>
