@@ -29,10 +29,25 @@
 </div> -->
 
 <div>
-    <form [formGroup]="errore">
+    <form [formGroup]="form">
         <mat-form-field>
-            <input matInput placeholder="Prova Custom Error" formControlName="testCtrl" name="custom" id="custom" type="text" required>
-            <mat-error *ngIf="errore.get('testCtrl').hasError('shouldBeUnique')"><strong>Errore custom | verifica user</strong></mat-error>
+            <input matInput placeholder="Prova Custom Error" formControlName="provalidator" name="custom" id="custom" type="text" required>
+            <mat-error *ngIf="provalidator.touched && provalidator.invalid"><strong>Errore custom | verifica user</strong></mat-error>
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Prova Email Error" formControlName="emailidator" name="email" id="email" type="email" required>
+            <!-- <mat-error *ngIf="emailidator.dirty && emailidator.invalid"><strong></strong></mat-error> -->
+            <mat-error *ngIf="emailidator.errors.required"><strong>La email è obbligatoria</strong></mat-error>
+            <mat-error *ngIf="emailidator.errors.email"><strong>Email non valida</strong></mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Prova Asincro Error" formControlName="asincrovalida" name="asincro" id="asincro" type="text" required>
+            <!-- <mat-error *ngIf="asincrovalida.errors.shouldBeUnique"><strong>Validazione Asincrona</strong></mat-error> -->
+            <mat-error  *ngIf="asincrovalida.errors.shouldBeUnique"><strong>Should Be Unique</strong></mat-error>
+
+        </mat-form-field>
+        <div  *ngIf="asincrovalida.errors.shouldBeUnique">Should Be Unique</div>
     </form>
+
+    
 </div>
