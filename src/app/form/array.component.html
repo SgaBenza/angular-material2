@@ -1,0 +1,15 @@
+<form>
+
+    <mat-form-field>
+        <input matInput placeholder="Array di form" type="text" (keyup.enter)="addTopic(topic)" #topic>
+    </mat-form-field>
+    <mat-list-item *ngFor="let topic of topics.controls" (click)="removeTopic(topic)">{{ topic.value }}</mat-list-item>
+    
+
+    <!-- <input placeholder="Array di form" type="text" (keyup.enter)="addTopic(topic)" #topic>
+    <ul>
+        <li *ngFor="let topic of topics.controls" (click)="removeTopic(topic)">
+            {{topic.value}}
+        </li>
+    </ul> -->
+</form>

@@ -1,3 +1,4 @@
+import { ArrayForm } from './form/array.component';
 import { PostsComponent } from './posts/posts.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,6 +8,7 @@ const routes: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full' },
     { path: 'posts', component: PostsComponent },
     { path: 'validazioni', component: ValidazioniComponent },
+    { path: 'array', component: ArrayForm }
     // { path: 'posts', component: PostsComponent },
     // { path: 'tempdriven', component: TemplateDrivenFormComponent }
 ];

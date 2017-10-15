@@ -1,3 +1,4 @@
+import { ArrayForm } from './form/array.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostsService } from './services/posts.service';
 import { HttpModule } from '@angular/http';
@@ -18,6 +19,7 @@ import { ValidazioniComponent } from './validation/validazioni.component';
 @NgModule({
   declarations: [
     AppComponent,
+    ArrayForm,
     PostsComponent,
     ShadowComponent,
     ValidazioniComponent
@@ -29,6 +31,7 @@ import { ValidazioniComponent } from './validation/validazioni.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    MatInputModule,
     MatIconModule,
     MatInputModule,
     MatButtonModule,
