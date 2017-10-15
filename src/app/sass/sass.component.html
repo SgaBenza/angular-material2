@@ -1,0 +1,14 @@
+<h1>HEADING 1</h1>
+<h2>HEADING 2</h2>
+
+<button mat-button color="primary">text 1</button>
+<button mat-button color="accent">text 2</button>
+
+<form #sass="ngForm">
+ <div >
+  <mat-form-field color="(value)">
+    <input matInput placeholder="SASS training" [formControl]="sassControl" (blur)="accent()" required>
+  </mat-form-field>
+ </div>
+ {{value  }}
+</form>

@@ -1,0 +1,60 @@
+//#############################################################################################
+
+//@import "another.scss";
+/* 
+Da questo import si possono importare in questo file insiemi di stili presenti da 
+altre parti 
+*/
+
+/* $color1: blue;
+$color2: green;
+
+h1 {
+    color: $color1;
+}
+
+h2 {
+    color: $color2;
+} */
+
+//#############################################################################################
+
+/*
+Con i decoraotri @mixin e @include riusciamo a definire un insieme di attribruti e raggrupparli 
+in un unica proprietà. Inoltre le proprietà che ne derivano vengono utilizzate come metodi ai quali 
+si passano dei parametri da richiamare a piacimento
+*/
+
+/* @mixin soft-border($border-radius){
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    padding: 10px;
+}
+
+.box { 
+   @include soft-border(5px);
+}
+
+.modern-box { 
+    @include soft-border(10px);
+    
+} */
+
+//#############################################################################################
+
+//Qui importo il tema offerto SCSS offerto da Angular Material
+@import "~@angular/material/_theming";
+
+@include mat-core();
+
+$app-primary: mat-palette($mat-deep-purple, A200);
+$app-accent: mat-palette($mat-purple, A200);
+$app-warn: mat-palette($mat-green);
+
+// Il tema dark viene importato dal file index.html con class="mat-app-background" nel body e impostato da qui con il light o dark
+// $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+
+//Tema custom light
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);

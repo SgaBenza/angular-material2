@@ -7,12 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatListModule, MatButtonModule, MatIconModule, MatInputModule } from '@angular/material';
-
 import { AppComponent } from './app.component';
 import { ShadowComponent } from './shadow/shadow.component';
 import { PostsComponent } from './posts/posts.component';
 import { ValidazioniComponent } from './validation/validazioni.component';
+import { MaterialDesignModule } from './material-design/material-design.module';
+import { SassComponent } from './sass/sass.component';
 
 
 
@@ -22,7 +22,8 @@ import { ValidazioniComponent } from './validation/validazioni.component';
     ArrayForm,
     PostsComponent,
     ShadowComponent,
-    ValidazioniComponent
+    ValidazioniComponent,
+    SassComponent
 
   ],
   imports: [
@@ -31,11 +32,7 @@ import { ValidazioniComponent } from './validation/validazioni.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MatInputModule,
-    MatIconModule,
-    MatInputModule,
-    MatButtonModule,
-    MatListModule,
+    MaterialDesignModule,
     ReactiveFormsModule,
     RouterModule,
   ],
