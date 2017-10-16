@@ -1,24 +1,24 @@
 <form>
-  <md-form-field>
-    <input mdInput placeholder="Inserisci post" type="text"
+  <mat-form-field>
+    <input matInput placeholder="Inserisci post" type="text"
     (change)="createPost(title)" #title>
-  </md-form-field>
+  </mat-form-field>
    
 </form>
-<md-list>
-  <md-list-item *ngFor="let post of posts">
-  <!-- <button md-button (click)="updatePost(post)">update</button> -->
-  <!-- <button md-mini-fab color="primary" (click)="deletePost(post)">delete</button> -->
-  <button md-mini-fab color="primary">
-      <md-icon class="md-24" (click)="updatePost(post)">update</md-icon>
+<mat-list>
+  <mat-list-item *ngFor="let post of posts">
+  <!-- <button mat-button (click)="updatePost(post)">update</button> -->
+  <!-- <button mat-mini-fab color="primary" (click)="deletePost(post)">delete</button> -->
+  <button mat-mini-fab color="primary">
+      <mat-icon class="mat-24" (click)="updatePost(post)">update</mat-icon>
   </button>
-  <button md-mini-fab>
-      <md-icon class="md-24" (click)="deletePost(post)">delete</md-icon>
+  <button mat-mini-fab>
+      <mat-icon class="mat-24" (click)="deletePost(post)">delete</mat-icon>
   </button>
   
   {{post.title}}
-  </md-list-item>
-</md-list>
+  </mat-list-item>
+</mat-list>
 
 
 

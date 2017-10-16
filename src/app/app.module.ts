@@ -13,6 +13,8 @@ import { PostsComponent } from './posts/posts.component';
 import { ValidazioniComponent } from './validation/validazioni.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
 import { SassComponent } from './sass/sass.component';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { GithubFollowersService } from './services/github-followers.service';
 
 
 
@@ -23,7 +25,8 @@ import { SassComponent } from './sass/sass.component';
     PostsComponent,
     ShadowComponent,
     ValidazioniComponent,
-    SassComponent
+    SassComponent,
+    GithubFollowersComponent
 
   ],
   imports: [
@@ -36,7 +39,10 @@ import { SassComponent } from './sass/sass.component';
     ReactiveFormsModule,
     RouterModule,
   ],
-  providers: [PostsService],
+  providers: [
+    GithubFollowersService,
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

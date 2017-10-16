@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ValidazioniComponent } from './validation/validazioni.component';
 import { SassComponent } from './sass/sass.component';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/', pathMatch: 'full' },
     { path: 'array', component: ArrayForm },
+    { path: 'github/followers', component: GithubFollowersComponent},
     { path: 'posts', component: PostsComponent },
     { path: 'validazioni', component: ValidazioniComponent },
     { path: 'sass', component: SassComponent }   
